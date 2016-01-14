@@ -58,7 +58,7 @@ if not settings.DEBUG:
 
     # Application definition
 
-    INSTALLED_APPS = (
+    INSTALLED_APPS = [
         # django app
         'django.contrib.admin',
         'django.contrib.auth',
@@ -67,12 +67,12 @@ if not settings.DEBUG:
         'django.contrib.sites',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-		# third party apps
+        # third party apps
         'crispy_forms',
         'registration',
-		# my apps
+        # my apps
         'newsletter',
-    )
+    ]
 
     MIDDLEWARE_CLASSES = (
         'django.contrib.sessions.middleware.SessionMiddleware',
