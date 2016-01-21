@@ -7,8 +7,9 @@ from django.contrib import admin
 urlpatterns = [
     # Examples:
     url(r'^$', 'newsletter.views.home', name='home'),
-    url(r'^contact/$', 'newsletter.views.contact', name='contact'),
+    url(r'^question/()$', 'questions.views.single', name='question_single'),
     url(r'^question/$', 'questions.views.home', name='question_home'),
+    url(r'^contact/$', 'newsletter.views.contact', name='contact'),
     url(r'^about/$', 'matchmaker.views.about', name='about'),
     # url(r'^blog/', include('blog.urls')),
 
