@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 
 # Create your views here.
 
@@ -9,10 +9,6 @@ from .models import Question, Answer
 
 def single(request, id):
     # checks to see if the question exists and if it doesnt gives a 404
-    try:
-        instance = Question.objects.get(id=id)
-    except :
-        raise Http404
     if request.user.is_authenticated():
         form = UserResponseForm(request.POST or None)
         if form.is_valid():
@@ -21,9 +17,11 @@ def single(request, id):
             question_instance = Question.objects.get(id=answer_id)
             answer_instance = Answer.objects.get(id=answer_id)
             print answer_instance.text, question_instance.text
+            next_q = Question.objects.all().order_by("?").first()
+            return redirect("question_single", id=next_q.id)
 
         queryset = Question.objects.all().order_by('-timestamp')
-        instance = queryset[0]
+        instance = get_object_or_404(Question, id=id)
         context = {
             "form": form,
             "instance": instance,
