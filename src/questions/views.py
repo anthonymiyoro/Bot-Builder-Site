@@ -1,11 +1,18 @@
-from django.shortcuts import render, Http404
+from django.http import Http404
+from django.shortcuts import render
 
 # Create your views here.
 
 from .forms import UserResponseForm
 from .models import Question, Answer
 
+
 def single(request, id):
+    # checks to see if the question exists and if it doesnt gives a 404
+    try:
+        instance = Question.objects.get(id=id)
+    except :
+        raise Http404
     if request.user.is_authenticated():
         form = UserResponseForm(request.POST or None)
         if form.is_valid():
@@ -24,7 +31,6 @@ def single(request, id):
         return render(request, "questions/home.html", context)
     else:
         raise Http404
-
 
 
 def home(request):
