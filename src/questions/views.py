@@ -26,7 +26,7 @@ def single(request, id):
             "form": form,
             "instance": instance,
         }
-        return render(request, "questions/home.html", context)
+        return render(request, "questions/single.html", context)
     else:
         raise Http404
 
