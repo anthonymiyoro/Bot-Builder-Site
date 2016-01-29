@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 # Create your views here.
 
 from .forms import UserResponseForm
-from .models import Question, Answer
+from .models import Question, Answer, UserAnswer
 
 
 def single(request, id):
@@ -19,6 +19,18 @@ def single(request, id):
             question_instance = Question.objects.get(id=answer_id)
             answer_instance = Answer.objects.get(id=answer_id)
             print answer_instance.text, question_instance.text
+
+            # Creates an instance of the answer below
+            new_user_answer = UserAnswer()
+            new_user_answer.user = request.user
+            new_user_answer.question = question_instance
+            new_user_answer.my_answer = Answer.objects.get(id=answer_id)
+            new_user_answer.my_answer_importance = Answer.objects.get(id=answer_id)
+            new_user_answer.their_answer = Answer.objects.get(id=answer_id)
+            new_user_answer.their_answer_importance = Answer.objects.get(id=answer_id)
+            # then saves it
+            new_user_answer.save()
+
             next_q = Question.objects.all().order_by("?").first()
             return redirect("question_single", id=next_q.id)
 
