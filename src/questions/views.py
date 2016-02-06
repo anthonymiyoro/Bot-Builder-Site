@@ -14,20 +14,33 @@ def single(request, id):
         if form.is_valid():
             print form.cleaned_data
             print request.POST
+
             question_id = form.cleaned_data.get('question_id')
+
             answer_id = form.cleaned_data.get('answer_id')
+            importance_level = form.cleaned_data.get('importance_level')
+
+            their_importance_level = form.cleaned_data.get('their_importance_level')
+            their_answer_id =form.cleaned_data.get('their_answer_id')
+
             question_instance = Question.objects.get(id=answer_id)
             answer_instance = Answer.objects.get(id=answer_id)
+
+
             print answer_instance.text, question_instance.text
 
-            # Creates an instance of the answer below
+            # Creates an instance of the answer
             new_user_answer = UserAnswer()
             new_user_answer.user = request.user
             new_user_answer.question = question_instance
-            new_user_answer.my_answer = Answer.objects.get(id=answer_id)
-            new_user_answer.my_answer_importance = Answer.objects.get(id=answer_id)
-            new_user_answer.their_answer = Answer.objects.get(id=answer_id)
-            new_user_answer.their_answer_importance = Answer.objects.get(id=answer_id)
+            new_user_answer.my_answer = answer_instance
+            new_user_answer.my_answer_importance = importance_level
+            if their_answer_id != -1:
+                their_answer_instance = Answer.objects.get(id=their_answer_id)
+                new_user_answer.their_answer = their_answer_instance
+                new_user_answer.their_importance = their_importance_level
+            else:
+                new_user_answer.their_importance = "Not Important"
             # then saves it
             new_user_answer.save()
 
