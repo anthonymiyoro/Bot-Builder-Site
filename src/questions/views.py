@@ -10,6 +10,11 @@ from .models import Question, Answer, UserAnswer
 def single(request, id):
     # checks to see if the question exists and if it doesnt gives a 404
     if request.user.is_authenticated():
+
+        queryset = Question.objects.all().order_by('-timestamp')
+        instance = get_object_or_404(Question, id=id)
+        user_answer = UserAnswer.objects.get(user=request.user, question=instance)
+
         form = UserResponseForm(request.POST or None)
         if form.is_valid():
             print form.cleaned_data
@@ -47,11 +52,12 @@ def single(request, id):
             next_q = Question.objects.all().order_by("?").first()
             return redirect("question_single", id=next_q.id)
 
-        queryset = Question.objects.all().order_by('-timestamp')
-        instance = get_object_or_404(Question, id=id)
+
         context = {
             "form": form,
             "instance": instance,
+            "user_answer": user_answer,
+            # "queryset": queryset
         }
         return render(request, "questions/single.html", context)
     else:
