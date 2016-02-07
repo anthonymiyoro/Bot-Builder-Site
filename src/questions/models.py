@@ -38,13 +38,28 @@ class UserAnswer(models.Model):
     question = models.ForeignKey(Question)
     my_answer = models.ForeignKey(Answer, related_name='user_answer')
     my_answer_importance = models.CharField(max_length=55, choices=LEVELS)
+    my_points = models.IntegerField(default=-1)
     # the answer field is allowed to be blank
     their_answer = models.ForeignKey(Answer, null=True, blank=True)
     their_importance = models.CharField(max_length=55, choices=LEVELS)
+    their_points = models.IntegerField(default=-1)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __unicode__(self):
         return self.my_answer.text[:10]
+
+
+def score_importance(importance_level):
+    if importance_level == "Mandatory":
+        points = 300
+    elif importance_level == "Very Important":
+        points = 200
+    elif importance_level == "Somewhat Important":
+        points = 50
+    elif importance_level == "Not Important":
+        points = 0
+    else:
+        points = 0
 
 
 
