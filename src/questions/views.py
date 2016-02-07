@@ -54,6 +54,7 @@ def single(request, id):
                 user_answer.their_answer = their_answer_instance
                 user_answer.their_importance = their_importance_level
             else:
+                user_answer.their_answer = None
                 user_answer.their_importance = "Not Important"
             # then saves it
             user_answer.save()
