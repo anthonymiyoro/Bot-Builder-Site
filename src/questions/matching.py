@@ -19,10 +19,10 @@ def get_match(user_a, user_b):
         user_b_pref = user_b_answers.their_answer
 
         if user_a_answer == user_b_pref:
-            print "user a fits with user b's preference"
+            print "%s fits with %s's preference" %(user_a_answers.user.username, user_a_answers.user.username)
 
         if user_a_pref == user_b_answer:
-        print "user b fits with user a's preference"
+            print "%s fits with user %s's preference"  %(user_a_answers.user.username, user_b_answers.user.username)
 
-        if user_a_answer == user_b_pref && user_a_pref == user_b_answer
+        if user_a_answer == user_b_pref && user_a_pref == user_b_answer:
             print "this is an ideal answer for both"
