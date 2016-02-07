@@ -13,12 +13,21 @@ def single(request, id):
 
         queryset = Question.objects.all().order_by('-timestamp')
         instance = get_object_or_404(Question, id=id)
-        user_answer = UserAnswer.objects.get(user=request.user, question=instance)
+
+
+        try:
+            user_answer = UserAnswer.objects.get(user=request.user, question=instance)
+        except UserAnswer.DoesNotExist:
+            user_answer = UserAnswer()
+        except UserAnswer.MultipleObjectsReturned:
+            user_answer = UserAnswer.objects.filter(user=request.user, question=instance)[0]
+        except:
+            user_answer = UserAnswer()
 
         form = UserResponseForm(request.POST or None)
         if form.is_valid():
             print form.cleaned_data
-            print request.POST
+            # print request.POST
 
             question_id = form.cleaned_data.get('question_id')
 
@@ -35,19 +44,19 @@ def single(request, id):
             print answer_instance.text, question_instance.text
 
             # Creates an instance of the answer
-            new_user_answer = UserAnswer()
-            new_user_answer.user = request.user
-            new_user_answer.question = question_instance
-            new_user_answer.my_answer = answer_instance
-            new_user_answer.my_answer_importance = importance_level
+            user_answer = UserAnswer()
+            user_answer.user = request.user
+            user_answer.question = question_instance
+            user_answer.my_answer = answer_instance
+            user_answer.my_answer_importance = importance_level
             if their_answer_id != -1:
                 their_answer_instance = Answer.objects.get(id=their_answer_id)
-                new_user_answer.their_answer = their_answer_instance
-                new_user_answer.their_importance = their_importance_level
+                user_answer.their_answer = their_answer_instance
+                user_answer.their_importance = their_importance_level
             else:
-                new_user_answer.their_importance = "Not Important"
+                user_answer.their_importance = "Not Important"
             # then saves it
-            new_user_answer.save()
+            user_answer.save()
 
             next_q = Question.objects.all().order_by("?").first()
             return redirect("question_single", id=next_q.id)
