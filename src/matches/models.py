@@ -35,5 +35,7 @@ class Match(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return self.match_decimal = 0.85
+        return "%.2f" %(self.match_decimal)
+
+    objects = MatchManager()
 
