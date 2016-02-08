@@ -64,7 +64,6 @@ def score_importance(importance_level):
         points = 0
 
 
-
 def update_user_answer_score(sender, instance,  *args, **kwargs):
     my_points = score_importance(instance.my_answer_importance)
     instance.my_points = my_points

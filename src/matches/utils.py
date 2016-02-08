@@ -3,11 +3,6 @@ from django.contrib.auth import get_user_model
 
 from questions.models import UserAnswer
 
-User = get_user_model()
-
-users = User.objects.all
-all_user_answers = UserAnswer.objects.all().order_by("user__id")
-
 
 def get_points(user_a, user_b):
     a_answers = UserAnswer.objects.filter(user=user_a)
