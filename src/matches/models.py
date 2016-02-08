@@ -25,9 +25,7 @@ class MatchManager(models.Manager):
             return obj_2, False
         else:
             new_instance = self.create(user_a=user_a, user_b=user_b)
-            new_instance.match_decimal = 0.85
-            new_instance.questions_answered = 20
-            new_instance.save()
+            new_instance.do_match()
             return new_instance, True
 
 
