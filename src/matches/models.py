@@ -28,6 +28,13 @@ class MatchManager(models.Manager):
             new_instance.do_match()
             return new_instance, True
 
+    def update_all(self):
+        queryset = self.all()
+        now = timezone.now()
+        offset = now - datetime.timedelta(hours=12)
+        offset2 = now - datetime.timedelta(hours=32)
+        queryset.fileter(updated__at=offset2).filter(updated__lte=offset)
+
 
 class Match(models.Model):
     user_a = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='match_user_a')
