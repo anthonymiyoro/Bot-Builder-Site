@@ -1,4 +1,5 @@
 import datetime
+from decimal import Decimal
 
 from django.conf import settings
 from django.db import models
@@ -52,6 +53,11 @@ class Match(models.Model):
         return "%.2f" % (self.match_decimal)
 
     objects = MatchManager()
+
+    @property
+    def get_percent(self):
+        new_decimal = self.match_decimal * Decimal(100)
+        return "%.2f%%" %(new_decimal)
 
     def do_match(self):
         user_a = self.user_a
