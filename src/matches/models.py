@@ -6,6 +6,7 @@ from django.utils import timezone
 
 
 # Create your models here.
+from .utils import get_match
 
 class MatchManager(models.Manager):
     def get_or_create_match(self,  user_a=None, user_b=None):
@@ -34,6 +35,10 @@ class MatchManager(models.Manager):
         offset = now - datetime.timedelta(hours=12)
         offset2 = now - datetime.timedelta(hours=32)
         queryset.fileter(updated__at=offset2).filter(updated__lte=offset)
+        if queryset.count > 0:
+            for i in queryset:
+                i.check_update()
+
 
 
 class Match(models.Model):
@@ -60,7 +65,7 @@ class Match(models.Model):
     def check_update(self):
         now = timezone.now()
         offset = now - datetime.timedelta(hours=12)
-        if self.updated <= offset:
+        for self.updated <= offset:
             self.do_match()
         else:
             print("already updated")
