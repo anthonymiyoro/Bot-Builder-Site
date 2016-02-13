@@ -1,6 +1,6 @@
 from decimal import Decimal
 from django.contrib.auth import get_user_model
-
+from django.db.models import Q
 from questions.models import UserAnswer, Question
 
 def get_match(user_a, user_b):
