@@ -3,9 +3,11 @@
 
 {% block content %}
 
-{{ profile.user }}
+<h3>{{ profile.user }}</h3>
 
-{{ profile.picture }}
+{% if profile.picture %}
+    <img src="{{ profile.picture.url }}" />
+{% endif %}
 
 
 {% endblock %}
