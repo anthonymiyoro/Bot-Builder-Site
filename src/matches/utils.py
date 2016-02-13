@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.db.models import Q
 from questions.models import UserAnswer, Question
 
+
 def get_match(user_a, user_b):
     q1 = Q(useranswer__user=user_a)
     q2 = Q(useranswer__user=user_b)
@@ -35,13 +36,10 @@ def get_match(user_a, user_b):
         b_decimal = b_points / Decimal(b_total_points)
         print b_decimal, a_decimal
         if a_decimal == 0:
-            a_decimal = 0.0001
+            a_decimal = 0.000001
         if b_decimal == 0:
-            b_decimal = 0.0001
-        match_percentage = (Decimal(a_decimal) * Decimal(b_decimal)) ** (1/Decimal(questions_in_common))
+            b_decimal = 0.000001
+        match_percentage = (Decimal(a_decimal) * Decimal(b_decimal)) ** (1 / Decimal(questions_in_common))
         return match_percentage, questions_in_common
     else:
         return 0.0, 0
-
-
-

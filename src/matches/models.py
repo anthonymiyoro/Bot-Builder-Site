@@ -61,10 +61,10 @@ class Match(models.Model):
         self.questions_answered = questions_answered
         self.save()
 
-        def check_update(self):
-            now = timezone.now()
-            offset = now - datetime.timedelta(hours=12)  # 12 hours ago
-            if self.updated <= offset:
-                self.do_match()
-            else:
-                print("already updated")
+    def check_update(self):
+        now = timezone.now()
+        offset = now - datetime.timedelta(hours=12)  # 12 hours ago
+        if self.updated <= offset:
+            self.do_match()
+        else:
+            print("already updated")
