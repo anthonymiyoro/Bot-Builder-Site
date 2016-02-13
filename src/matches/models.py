@@ -4,12 +4,12 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-
 # Create your models here.
 from .utils import get_match
 
+
 class MatchManager(models.Manager):
-    def get_or_create_match(self,  user_a=None, user_b=None):
+    def get_or_create_match(self, user_a=None, user_b=None):
         try:
             obj = self.get(user_a=user_a, user_b=user_b)
         except:
@@ -40,7 +40,6 @@ class MatchManager(models.Manager):
                 i.check_update()
 
 
-
 class Match(models.Model):
     user_a = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='match_user_a')
     user_b = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='match_user_b')
@@ -50,7 +49,7 @@ class Match(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __unicode__(self):
-        return "%.2f" %(self.match_decimal)
+        return "%.2f" % (self.match_decimal)
 
     objects = MatchManager()
 
@@ -62,11 +61,10 @@ class Match(models.Model):
         self.questions_answered = questions_answered
         self.save()
 
-    def check_update(self):
-        now = timezone.now()
-        offset = now - datetime.timedelta(hours=12)
-        for self.updated <= offset:
-            self.do_match()
-        else:
-            print("already updated")
-
+        def check_update(self):
+            now = timezone.now()
+            offset = now - datetime.timedelta(hours=12)  # 12 hours ago
+            if self.updated <= offset:
+                self.do_match()
+            else:
+                print("already updated")
