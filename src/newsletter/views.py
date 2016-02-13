@@ -2,6 +2,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 
+from matches.models import Match
 from questions.models import Question
 
 from .forms import ContactForm, SignUpForm
@@ -29,9 +30,12 @@ def home(request):
         }
 
     if request.user.is_authenticated():
+        matches = []
+        match_set = Match.objects.matches_all(request.user)
         queryset = Question.objects.all().order_by('-timestamp')  # .filter(full_name__iexact="Justin")
         context = {
-            "queryset": queryset
+            "queryset": queryset,
+            "matches": matches
         }
         return render(request, "questions/home.html", context)
 
