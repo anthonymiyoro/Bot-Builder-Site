@@ -31,7 +31,17 @@ def home(request):
 
     if request.user.is_authenticated():
         matches = []
-        match_set = Match.objects.matches_all(request.user)
+        match_set = Match.objects.matches_all(request.user).order_by('-match_decimal')
+        for match in match_set:
+            if match.user_a == request.user and match.user_b != request.user:
+                items_wanted = [match.user_b, match.get_percent]
+                matches.append(items_wanted)
+            elif match.user_b == request.user and match.user_a != request.user:
+                items_wanted = [match.user_a, match.get_percent]
+                matches.append(items_wanted)
+            else:
+                pass
+
         queryset = Question.objects.all().order_by('-timestamp')  # .filter(full_name__iexact="Justin")
         context = {
             "queryset": queryset,
