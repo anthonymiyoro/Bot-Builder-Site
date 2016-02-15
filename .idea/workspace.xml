@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd4ea09d-2073-4a5f-9a44-e7bd9f03069c" name="Default" comment="Created loca">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jobs/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.sqlite3" afterPath="$PROJECT_DIR$/src/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg" afterPath="$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg" />
+    <list default="true" id="fd4ea09d-2073-4a5f-9a44-e7bd9f03069c" name="Default" comment="Created location based search in the jobs app">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matches/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/views.py" afterPath="$PROJECT_DIR$/src/matches/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/questions/home.html" afterPath="$PROJECT_DIR$/src/templates/questions/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/home.html" afterPath="$PROJECT_DIR$/src/templates/home.html" />
     </list>
     <list id="a60f68d8-a87a-47b2-b7d5-0052fc1edd92" name="New changelist" comment="New changelist" />
     <ignored path="matchmaker.iws" />
@@ -47,14 +41,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matches/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15202703">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="location_match_view.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.26408452">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,8 +114,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -126,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/matchmaker/settings/production.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/matchmaker/settings/base.py" />
-        <option value="$PROJECT_DIR$/src/templates/home.html" />
         <option value="$PROJECT_DIR$/src/newsletter/admin.py" />
         <option value="$PROJECT_DIR$/src/questions/admin.py" />
         <option value="$PROJECT_DIR$/src/templates/questions/single.html" />
@@ -146,9 +159,13 @@
         <option value="$PROJECT_DIR$/src/profiles/models.py" />
         <option value="$PROJECT_DIR$/src/questions/models.py" />
         <option value="$PROJECT_DIR$/src/templates/questions/home.html" />
-        <option value="$PROJECT_DIR$/src/matches/views.py" />
         <option value="$PROJECT_DIR$/src/jobs/admin.py" />
         <option value="$PROJECT_DIR$/src/jobs/models.py" />
+        <option value="$PROJECT_DIR$/src/matches/views.py" />
+        <option value="$PROJECT_DIR$/src/matches/templates/matches/position_match_view.html" />
+        <option value="$PROJECT_DIR$/src/matches/urls.py" />
+        <option value="$PROJECT_DIR$/src/templates/home.html" />
+        <option value="$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html" />
       </list>
     </option>
   </component>
@@ -247,6 +264,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matchmaker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matchmaker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matches" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matchmaker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matchmaker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matches" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -511,12 +572,6 @@
       <created>1452758356192</created>
       <option name="number" value="Default" />
       <updated>1452758356192</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Made the questions and answers look more presentable">
-      <created>1452953085867</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1452953085867</updated>
     </task>
     <task id="LOCAL-00010" summary="Added question and answer adding functionality">
       <created>1453411444861</created>
@@ -806,7 +861,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455511964066</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Created location based search in the jobs app">
+      <created>1455515194751</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1455515194751</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -846,7 +907,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a model match manager" />
     <MESSAGE value="Fixed incomplete unicode error" />
     <MESSAGE value="Allowed for timestamp update" />
     <MESSAGE value="Cleared redundancy" />
@@ -871,7 +931,8 @@
     <MESSAGE value="Aligned the matches to look mre orderly" />
     <MESSAGE value="Fixed 0% match error" />
     <MESSAGE value="Fixed useranswer integrity errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed useranswer integrity errors" />
+    <MESSAGE value="Created location based search in the jobs app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created location based search in the jobs app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -880,30 +941,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/matchmaker/settings/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/questions/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matchmaker/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/questions/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1206,14 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7429577">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1232,7 +1261,7 @@
         <state vertical-scroll-proportion="0.17736487">
           <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1242,7 +1271,7 @@
         <state vertical-scroll-proportion="0.3412162">
           <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1277,11 +1306,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matches/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15202703">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matches/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15202703">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50176054">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26408452">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
