@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 from django.conf import settings
-import profiles.models
 
 
 class Migration(migrations.Migration):
@@ -18,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('location', models.CharField(max_length=120, null=True, blank=True)),
-                ('picture', models.ImageField(null=True, upload_to=profiles.models.upload_location, blank=True)),
+                ('picture', models.ImageField(null=True, upload_to=b'videos/', blank=True)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
         ),

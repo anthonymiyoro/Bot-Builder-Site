@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Answer',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('text', models.TextField(max_length=120)),
+                ('text', models.CharField(max_length=120)),
                 ('active', models.BooleanField(default=True)),
                 ('draft', models.BooleanField(default=False)),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),

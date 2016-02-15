@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd4ea09d-2073-4a5f-9a44-e7bd9f03069c" name="Default" comment="Created location based search in the jobs app">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matches/urls.py" />
+    <list default="true" id="fd4ea09d-2073-4a5f-9a44-e7bd9f03069c" name="Default" comment="Completed basic project functionality">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/questions/migrations/0003_useranswer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/questions/migrations/0004_auto_20160207_1215.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/questions/migrations/0005_auto_20160213_1505.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/templates/questions/home.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.sqlite3" afterPath="$PROJECT_DIR$/src/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg" afterPath="$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/__init__.py" afterPath="$PROJECT_DIR$/src/jobs/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/admin.py" afterPath="$PROJECT_DIR$/src/jobs/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/migrations/__init__.py" afterPath="$PROJECT_DIR$/src/jobs/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/models.py" afterPath="$PROJECT_DIR$/src/jobs/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/tests.py" afterPath="$PROJECT_DIR$/src/jobs/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jobs/views.py" afterPath="$PROJECT_DIR$/src/jobs/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/__init__.py" afterPath="$PROJECT_DIR$/src/matches/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/admin.py" afterPath="$PROJECT_DIR$/src/matches/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/src/matches/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/migrations/__init__.py" afterPath="$PROJECT_DIR$/src/matches/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/models.py" afterPath="$PROJECT_DIR$/src/matches/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/tests.py" afterPath="$PROJECT_DIR$/src/matches/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/urls.py" afterPath="$PROJECT_DIR$/src/matches/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/utils.py" afterPath="$PROJECT_DIR$/src/matches/utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matches/views.py" afterPath="$PROJECT_DIR$/src/matches/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matchmaker/settings/base.py" afterPath="$PROJECT_DIR$/src/matchmaker/settings/base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matchmaker/settings/local.py" afterPath="$PROJECT_DIR$/src/matchmaker/settings/local.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matchmaker/urls.py" afterPath="$PROJECT_DIR$/src/matchmaker/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/newsletter/views.py" afterPath="$PROJECT_DIR$/src/newsletter/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/__init__.py" afterPath="$PROJECT_DIR$/src/profiles/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/admin.py" afterPath="$PROJECT_DIR$/src/profiles/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/src/profiles/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/migrations/__init__.py" afterPath="$PROJECT_DIR$/src/profiles/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/models.py" afterPath="$PROJECT_DIR$/src/profiles/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/tests.py" afterPath="$PROJECT_DIR$/src/profiles/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/profiles/views.py" afterPath="$PROJECT_DIR$/src/profiles/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/__init__.py" afterPath="$PROJECT_DIR$/src/questions/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/admin.py" afterPath="$PROJECT_DIR$/src/questions/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/forms.py" afterPath="$PROJECT_DIR$/src/questions/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/src/questions/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/migrations/0002_answer.py" afterPath="$PROJECT_DIR$/src/questions/migrations/0002_answer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/migrations/__init__.py" afterPath="$PROJECT_DIR$/src/questions/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/models.py" afterPath="$PROJECT_DIR$/src/questions/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/tests.py" afterPath="$PROJECT_DIR$/src/questions/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/questions/views.py" afterPath="$PROJECT_DIR$/src/questions/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/requirements.txt" afterPath="$PROJECT_DIR$/src/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/static_in_pro/our_static/css/custom.css" afterPath="$PROJECT_DIR$/src/static_in_pro/our_static/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/base.html" afterPath="$PROJECT_DIR$/src/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/forms.html" afterPath="$PROJECT_DIR$/src/templates/forms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/home.html" afterPath="$PROJECT_DIR$/src/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/navbar.html" afterPath="$PROJECT_DIR$/src/templates/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/profiles/profile_view.html" afterPath="$PROJECT_DIR$/src/templates/profiles/profile_view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/questions/single.html" afterPath="$PROJECT_DIR$/src/templates/questions/single.html" />
     </list>
     <list id="a60f68d8-a87a-47b2-b7d5-0052fc1edd92" name="New changelist" comment="New changelist" />
     <ignored path="matchmaker.iws" />
@@ -29,82 +75,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matches/utils.py">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matches/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location_match_view.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26408452">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.4753521">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jobs/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/profiles/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/questions/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#1#33#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -154,18 +130,19 @@
         <option value="$PROJECT_DIR$/src/templates/profiles/profile_view.html" />
         <option value="$PROJECT_DIR$/src/static_in_pro/our_static/css/custom.css" />
         <option value="$PROJECT_DIR$/src/newsletter/views.py" />
-        <option value="$PROJECT_DIR$/src/matches/models.py" />
-        <option value="$PROJECT_DIR$/src/matches/utils.py" />
-        <option value="$PROJECT_DIR$/src/profiles/models.py" />
-        <option value="$PROJECT_DIR$/src/questions/models.py" />
         <option value="$PROJECT_DIR$/src/templates/questions/home.html" />
         <option value="$PROJECT_DIR$/src/jobs/admin.py" />
-        <option value="$PROJECT_DIR$/src/jobs/models.py" />
-        <option value="$PROJECT_DIR$/src/matches/views.py" />
         <option value="$PROJECT_DIR$/src/matches/templates/matches/position_match_view.html" />
         <option value="$PROJECT_DIR$/src/matches/urls.py" />
         <option value="$PROJECT_DIR$/src/templates/home.html" />
         <option value="$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html" />
+        <option value="$PROJECT_DIR$/src/matches/models.py" />
+        <option value="$PROJECT_DIR$/src/matches/views.py" />
+        <option value="$PROJECT_DIR$/src/jobs/models.py" />
+        <option value="$PROJECT_DIR$/src/matches/utils.py" />
+        <option value="$PROJECT_DIR$/src/profiles/models.py" />
+        <option value="$PROJECT_DIR$/src/questions/models.py" />
+        <option value="$PROJECT_DIR$/src/templates/navbar.html" />
       </list>
     </option>
   </component>
@@ -573,12 +550,6 @@
       <option name="number" value="Default" />
       <updated>1452758356192</updated>
     </task>
-    <task id="LOCAL-00010" summary="Added question and answer adding functionality">
-      <created>1453411444861</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1453411444861</updated>
-    </task>
     <task id="LOCAL-00011" summary="Created question frontend">
       <created>1453414147513</created>
       <option name="number" value="00011" />
@@ -867,14 +838,20 @@
       <option name="project" value="LOCAL" />
       <updated>1455515194751</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Added a location match page">
+      <created>1455516861478</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1455516861479</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="494" y="186" width="777" height="689" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25096524" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25096524" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -907,8 +884,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed incomplete unicode error" />
-    <MESSAGE value="Allowed for timestamp update" />
     <MESSAGE value="Cleared redundancy" />
     <MESSAGE value="Updated time for different timezones" />
     <MESSAGE value="Combined points collection and match algorithms" />
@@ -932,7 +907,9 @@
     <MESSAGE value="Fixed 0% match error" />
     <MESSAGE value="Fixed useranswer integrity errors" />
     <MESSAGE value="Created location based search in the jobs app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created location based search in the jobs app" />
+    <MESSAGE value="Added a location match page" />
+    <MESSAGE value="Completed basic project functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed basic project functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -945,9 +922,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,13 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/questions/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1007,16 +975,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/questions/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,9 +1104,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,13 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.088757396">
           <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17751479">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1223,37 +1173,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/profiles/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/questions/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/static_in_pro/our_static/img/profile_default.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/questions/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50176054">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/newsletter/views.py">
@@ -1266,51 +1188,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matches/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3412162">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matches/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jobs/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07601351">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jobs/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matches/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,18 +1212,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/matches/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22804055">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025337838">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jobs/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30405405">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
+        <state vertical-scroll-proportion="0.39612675">
           <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matches/templates/matches/location_match_view.html">
+    <entry file="file://$PROJECT_DIR$/src/matches/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26408452">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6334459">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matches/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10135135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/profiles/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9628378">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/questions/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1283784">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4753521">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
           <folding />
         </state>
       </provider>
