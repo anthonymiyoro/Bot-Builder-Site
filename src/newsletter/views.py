@@ -45,7 +45,7 @@ def home(request):
         queryset = Question.objects.all().order_by('-timestamp')  # .filter(full_name__iexact="Justin")
         context = {
             "queryset": queryset,
-            "matches": matches
+            "matches": matches[:6]
         }
         return render(request, "questions/home.html", context)
 

@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+<style>
+    {% block style %}
+    
 
-
-
-
-
-
-
-
+    {% endblock %}
+    
+</style>
 
 {% block content %}
 
@@ -18,7 +17,10 @@
         </div>
 
         <div class="col-sm-4">
+        <div class="col-sm-12">
             <h3>Matches</h3>
+        <hr/>
+        </div>
             {% for match_user, percent in matches %}
                 <div class="col-sm-4">
                 <a href="{{ match_user.profile.get_absolute_url }}">
