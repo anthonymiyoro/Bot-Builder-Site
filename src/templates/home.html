@@ -28,15 +28,15 @@
  <div class="container">
 	<div class="row">
 		<div class='col-sm-6'>
-		<h1>Matchmaker 2</h1>
-		<p>The MVP Landing project is designed to get your project started. The goal is to help you launch as soon as possible with the least amount of investment using time or money. Join Us today.</p>
+		<h1>The Matchmaker</h1>
+		<p>Get to work with the best of those suited to you in the same location with the same interests.
+            A happy workplace is a productive workplace.</p>
 		<p>
-		<a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
+		<a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}" role="button">Join Us Today !</a>
 		</p>
 		</div>
 		<div class='col-sm-6' >
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GO649Txwd4c" frameborder="0" allowfullscreen></iframe>
  		</div>
 		</div>
 	</div>
@@ -73,37 +73,26 @@
 
 			<form method='POST' action=''>{% csrf_token %}
 			{{ form|crispy }}
-
-			<input class='btn btn-primary' type='submit' value='Sign Up' />
-
 			</form>
 	</div>
 
 	<div class='col-sm-3'>
-<p class='lead text-align-center'>Django &amp; Bootstrap</p>
-			<img src='{% static "img/marketing1.jpg" %}' class='img-responsive' />
+<p class='lead text-align-center'>Happier Workplaces</p>
+			<img src='{% static "img/workplace-happy.jpg" %}' class='img-responsive' />
 </div>
 
 <div class='col-sm-3'>
-<p class='lead text-align-center'>Created for Starters 
-<br/>
-<span class='fa-stack fa-lg fa-5x'>
-<i class='fa fa-comment-o fa-stack-2x'></i>
-<i style='color:yellow;' class="fa fa-bolt fa-stack-1x"></i>
-
-</span>
+<p class='lead text-align-center'>Increased productivity
+<br/><br/>
+<img src='{% static "img/productvity.jpg" %}' class='img-responsive' />
 </p>
 
 </div>
 
 <div class='col-sm-3'>
-<p class='lead text-align-center'>Always Open Source <br/><br/>
+<p class='lead text-align-center'>No more sleepless nights<br/><br/>
+<img src='{% static "img/frustration.jpeg" %}' class='img-responsive' />
 
-<span class="fa-stack fa-lg fa-5x">
-<i class="fa fa-circle-o-notch fa-stack-2x"></i>
-  <!-- <i class="fa fa-square-o fa-stack-2x"></i> -->
-  <i class="fa fa-github fa-stack-1x"></i>
-</span>
 </p>
 
 
