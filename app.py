@@ -4,11 +4,7 @@ app = Flask(__name__)
 # What to display on the main page
 @app.route('/')
 def hello_world():
-	author = "mer"
-	name = "you"
-	return render_template('index.html', author=author, name=name)
-
-
+	return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
