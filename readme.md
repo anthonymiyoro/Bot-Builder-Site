@@ -25,7 +25,7 @@
 
 5. Head over to Messenger under products in you projects facebook developer page and click on settings. Navigate to the webhooks section, click on edit events and select messages and messaging_postbacks as shown below.
 	
-	![setup-fb-messenger-app](https://blog.hartleybrody.com/wp-content/uploads/2016/06/page-access-token-generation-1024x346.png "")
+	![fb-events](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/events.png "")
 
 
 ### NGROK SETUP
@@ -61,5 +61,21 @@
 
 	```
 
-6.
+6. Head over to your apps page on the Facebook for Developers site and under products, select webhooks. 
+
+Once selected click on edit subscription and copy your https url shown by ngrock in your terminal to the 
+Callback URL section followed by /webhook. According to the image above, our callback url will be 
+
+```
+https://bd2cb171.ngrok.io/webhook
+
+```
+
+Under the Verify Token field of the page subscription, add 
+
+```
+my_verify_token
+
+```
+as seen in the config.py file. You can then click on the verify and save button to save the webhook.
 
