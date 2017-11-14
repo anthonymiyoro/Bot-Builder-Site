@@ -32,9 +32,7 @@
 
 1. Download your desired bot template from the website
 
-
 2. Dowload ngrok from their [page](https://ngrok.com/download).
-
 
 3. On Linux or OSX you can unzip ngrok from a terminal with the following command. 
 
@@ -44,11 +42,7 @@
 	```
 	On Windows, just double click ngrok.zip.
 
-
 4. Navigate to the folder containing the unzipped contents of ngrock and run it with the command ./ngrok . You should see something similar to the image below on your terminal.
-
-	
-
 
 5. Copy and replace the facebook token and server url in the config.py file and replace FACEBOOK_TOKEN_HERE with the facebook page token selected as in the instructions above and SERVER_URL_HERE with the url displayed after running ngrok:
 
@@ -63,14 +57,11 @@
 
 6. Head over to your apps page on the Facebook for Developers site and under products, select webhooks.
 
-	![Webhook](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/webhook.png "")
+	![URL subscription](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/subscription.png "")
 
-	
 	Once selected click on edit subscription and copy your https url (as shown below) from ngrock in your terminal to the Callback URL section followed by /webhook. 
 	
 	![ngrok](https://cdn-images-1.medium.com/max/1600/1*LtnvanCk2-ZVJY1kA0cMfQ.png "")
-	
-	![URL subscription](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/subscription.png "")
 	
 	According to the image above, our callback url will be 
 
@@ -78,12 +69,14 @@
 	https://bd2cb171.ngrok.io/webhook
 
 	```
-
 	Under the Verify Token field of the page subscription, add 
-
 	```
 	my_verify_token
 
 	```
-	as seen in the config.py file. You can then click on the verify and save button to save the webhook.
+	as seen in the config.py file. 
+	
+	![Webhook](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/webhook.png "")
+	
+	You can then click on the verify and save button to save the webhook.
 
