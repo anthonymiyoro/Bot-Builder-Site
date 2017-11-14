@@ -1,0 +1,3 @@
+flask
+Flask-Social
+http://github.com/pythonforfacebook/facebook-sdk/tarball/master
