@@ -1,5 +1,7 @@
 ## INSTRUCTION TEXT FOR WEBSITE
 
+
+
 ### FACEBOOK SETUP
 
 1. Set up a facebook [page](https://www.facebook.com/pages/create/).
@@ -26,6 +28,7 @@
 5. Head over to Messenger under products in you projects facebook developer page and click on settings. Navigate to the webhooks section, click on edit events and select messages and messaging_postbacks as shown below.
 	
 	![fb-events](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/events.png "")
+
 
 
 ### NGROK SETUP
@@ -55,7 +58,9 @@
 
 	```
 
-6. Head over to your apps page on the Facebook for Developers site and under products, select webhooks.
+6. Run your bot by running python server.py after saving your changes to the server.py file. 
+
+7. Head over to your apps page on the Facebook for Developers site and under products, select webhooks.
 
 	![URL subscription](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/subscription.png "")
 
@@ -79,4 +84,6 @@
 	![Webhook](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/webhook.png "")
 	
 	You can then click on the verify and save button to save the webhook.
+
+
 
