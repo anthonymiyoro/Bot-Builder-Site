@@ -1,7 +1,6 @@
 ## INSTRUCTION TEXT FOR WEBSITE
 
 
-
 ### FACEBOOK SETUP
 
 1. Set up a facebook [page](https://www.facebook.com/pages/create/).
@@ -84,6 +83,63 @@
 	![Webhook](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/webhook.png "")
 	
 	You can then click on the verify and save button to save the webhook.
+
+
+### HEROKU INSTRUCTIONS
+
+After clicking the click to deploy buttons below, your selected template will be hosted and deployed ontu Heroku automatically. The only issue is that the config.py file does not contain your specific Facebook page keys and server url.
+
+To fix this, follow the following steps;
+
+1. Dowload the heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli). This will allow you to get your deployed folder containing your bot from heroku.
+
+2. Open your config.py file and fill in the required variables replacing FACEBOOK_TOKEN_HERE with you facebook app pages' token and SERVER_URL_HERE with the url of your newly created heroku server.
+
+The config.py file should look like the snippet below:
+
+	```
+	CONFIG = {
+     'FACEBOOK_TOKEN': 'FACEBOOK_TOKEN_HERE',
+     'VERIFY_TOKEN': 'my_verify_token',
+     'SERVER_URL': 'SERVER_URL_HERE'
+ 	}
+
+	```
+
+When filled, it should look like the snippet below:
+
+	```
+	CONFIG = {
+     'FACEBOOK_TOKEN': 'EAAHUC2GIMSoZAioyW4orexO9tCCHvdCCnC2GIMSoZAioyW4orexO9tCCHvdCC2GIMSoZAioyW4orexO9tCCHvdCLF1mFlnqC2GIMSoZAioyW4orexO9tCCHvdCxdLF1mFlnqC2GIMSoZAioyW4orexO9tCCHvdC',
+     'VERIFY_TOKEN': 'my_verify_token',
+     'SERVER_URL': 'https://site-example-name.herokuapp.com/'
+ 	}
+ 	
+	```
+
+Once filled, save your config.py file and head over to the heroku [dashboard](https://dashboard.heroku.com/apps), select your previously created app. 
+
+Once selected you should se something similar to the image below: 
+
+![Overview](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/overview.png "").
+
+Navigate to the deploy section and then select the heroku-git option as shown in the image below:
+
+![Deploy](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/deploy.png "")
+
+Ensure you have navigated to the folder containing your bot and type in the given commands to your terminal as shown in the image below:
+
+![Install](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/install.png "")
+
+
+
+
+
+
+
+
+
+
 
 
 
