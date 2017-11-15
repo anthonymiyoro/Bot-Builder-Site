@@ -91,9 +91,22 @@ After clicking the click to deploy buttons below, your selected template will be
 
 To fix this, follow the following steps;
 
-1. Dowload the heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli). This will allow you to get your deployed folder containing your bot from heroku.
+1. Dowload the heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli). 
 
-2. Open your config.py file and fill in the required variables replacing FACEBOOK_TOKEN_HERE with you facebook app pages' token and SERVER_URL_HERE with the url of your newly created heroku server.
+2. Once heroku has been installed, open the heroku [dashboard](https://dashboard.heroku.com/apps).
+Select your newly created app and navigate to the deploy section as shown in the images below.
+
+![Overview](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/overview.png "").
+
+
+![Deploy](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/deploy.png "")
+
+3. Run the code indicated in the image below to get a copy of your bot template and navigate to its folder in your terminal.
+
+![Run](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/install-amended.png "")
+
+
+4. Open your config.py file and fill in the required variables replacing FACEBOOK_TOKEN_HERE with you facebook app pages' token and SERVER_URL_HERE with the url of your newly created heroku server.
 
 The config.py file should look like the snippet below:
 
@@ -117,9 +130,9 @@ When filled, it should look like the snippet below:
  	
 	```
 
-Once filled, save your config.py file and head over to the heroku [dashboard](https://dashboard.heroku.com/apps), select your previously created app. 
+5. Once filled, save your config.py file and head over to the heroku [dashboard](https://dashboard.heroku.com/apps) and select your previously created app. 
 
-Once selected you should se something similar to the image below: 
+6. Once selected you should se something similar to the image below: 
 
 ![Overview](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/overview.png "").
 
@@ -127,7 +140,7 @@ Navigate to the deploy section and then select the heroku-git option as shown in
 
 ![Deploy](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/deploy.png "")
 
-Ensure you have navigated to the folder containing your bot and type in the given commands to your terminal as shown in the image below:
+Ensure you have navigated to the folder containing your bot and type in the given commands to your terminal as indicated in the image below:
 
 ![Install](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/install.png "")
 
