@@ -1,14 +1,222 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Facebook Bot app</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body id="page-top">
+      
+      <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=132782414052227';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+      
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#how_to_use">How to use</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+<!--            <li> <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div></li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Python Bot Templates</h1>
+        <p class="lead">Fast way of getting your bot started</p>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About this project</h2>
+            <p class="lead">This project was started to help developers get a head start at making their bots. No need to code from scrach just edit what you need and don't need and voila. The bots we offer are: </p>
+            <ul>
+              <li>Restaurants booking bot</li>
+              <li>Hotel bot</li>
+              <li>Shopping bot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how_to_use" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1>How to use</h1>
+            <h2>FACEBOOK SETUP</h2>
+              <p class="lead">1.Set up a facebook page.</p>
+              <p class="lead">2.Go to the Facebook Developer’s Quickstart Page and click “Skip and Create App ID” at the top right. Then create a new Facebook App for your bot and give your app a name, category and contact email.</p>
+              <img src="https://blog.hartleybrody.com/wp-content/uploads/2016/06/create-fb-app-1024x604.png" style="max-width: 100%">
+              <p class="lead">You’ll see your new App ID at the top right on the next page. Scroll down and click “Get Started” next to Messenger.</p>
+              <img src="https://blog.hartleybrody.com/wp-content/uploads/2016/06/setup-fb-messenger-app-1024x613.png" style="max-width: 100%">
+              <p class="lead">3. Now you’re in the Messenger settings for your Facebook App. There are a few things in here you’ll need to fill out in order to get your chatbot wired up to the Heroku endpoint we setup earlier.</p>
+              <img src="https://blog.hartleybrody.com/wp-content/uploads/2016/06/page-access-token-generation-1024x346.png" style="max-width: 100%">
+              <p class="lead">Using the Page you created earlier (or an existing Page), click through the auth flow and you’ll receive a Page Access Token for your app.</p>
+              <p class="lead">Click on the Page Access Token to copy it to your clipboard.</p>
+              <p class="lead">4. Paste the page access token into its field in the config.py file.</p>
+              <p class="lead">5. Head over to Messenger under products in you projects facebook developer page and click on settings. Navigate to the webhooks section, click on edit events and select messages and messaging_postbacks as shown below.</p>
+              <img src="images/events.png" style="max-width: 100%">
+              <h2>Ngrok Setup</h2>
+              <p class="lead">1. Download your desired bot template from the website</p>
+              <p class="lead">2. Download ngrok from their [page](https://ngrok.com/download).</p>
+              <p class="lead">3. On Linux or OSX you can unzip ngrok from a terminal with the following command.</p>
+              <pre>
+                <code>
+                    CONFIG = {
+                     'FACEBOOK_TOKEN': 'FACEBOOK_TOKEN_HERE',
+                     'VERIFY_TOKEN': 'my_verify_token',
+                     'SERVER_URL': 'SERVER_URL_HERE'
+                    }
+                </code>
+              </pre>
+              <p class="lead">6. Run your bot by running python server.py after saving your changes to the server.py file.</p>
+              <p class="lead">7. Head over to your apps page on the Facebook for Developers site and under products, select webhooks.</p>
+              <img src="images/subscription.png" style="max-width: 100%">
+              
+              <p class="lead">Once selected click on edit subscription and copy your https url (as shown below) from ngrock in your terminal to the Callback URL section followed by /webhook.</p>
+              
+              <img src="https://cdn-images-1.medium.com/max/1600/1*LtnvanCk2-ZVJY1kA0cMfQ.png" style="max-width: 100%">
+              
+              <p class="lead">According to the image above, our callback url will be</p>
+              
+              <pre>
+                <code>
+                    https://bd2cb171.ngrok.io/webhook
+                </code>
+              </pre>
+              
+              <p class="lead">Under the Verify Token field of the page subscription, add</p>
+              <pre>
+                <code>
+                    my_verify_token
+                </code>
+              </pre>
+              
+              <p class="lead">As seen in the config.py file.</p>
+              
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/webhook.png" style="max-width: 100%">
+              
+              <p class="lead">You can then click on the verify and save button to save the webhook.</p>
+              
+              <h2>HEROKU INSTUCTIONS</h2>
+              <p class="lead">After clicking the click to deploy buttons below, your selected template will be hosted and deployed ontu Heroku automatically. The only issue is that the config.py file does not contain your specific Facebook page keys and server url.</p>
+              <p class="lead">To fix this, follow the following steps;</p>
+              <p class="lead">1.Dowload the heroku CLI from <a href="https://devcenter.heroku.com/articles/heroku-cli">here</a>.</p>
+              <p class="lead">2.Once heroku has been installed, open the heroku <a href="https://dashboard.heroku.com/apps">Dashboard</a>. Select your newly created app and navigate to the deploy section as shown in the images below.</p>
+              
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/overview.png" style="max-width: 100%">
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/deploy.png" style="max-width: 100%">
+              
+              <p class="lead">3.Run the code indicated in the image below to get a copy of your bot template and navigate to its folder in your terminal.</p>
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/install-amended.png" style="max-width: 100%">
+              <p class="lead">4.Open your config.py file and fill in the required variables replacing FACEBOOK_TOKEN_HERE with you facebook app pages' token and SERVER_URL_HERE with the url of your newly created heroku server.</p>
+              <p class="lead">The config.py file should look like the snippet below:</p>
+              <pre>
+                <code>CONFIG = {
+                         'FACEBOOK_TOKEN': 'FACEBOOK_TOKEN_HERE',
+                         'VERIFY_TOKEN': 'my_verify_token',
+                         'SERVER_URL': 'SERVER_URL_HERE'
+                     }
+                </code>
+              </pre>
+              <p class="lead">When filled, it should look like the snippet below:</p>
+              <pre>
+                <code>
+                    CONFIG = {
+                         'FACEBOOK_TOKEN': 'EAAHUC2GIMSoZAioyW4orexO9tCCHvdCCnC2GIMSoZAioyW4orexO9tCCHvdCC2GIMSoZAioyW4orexO9tCCHvdCLF1mFlnqC2GIMSoZAioyW4orexO9tCCHvdCxdLF1mFlnqC2GIMSoZAioyW4orexO9tCCHvdC',
+                         'VERIFY_TOKEN': 'my_verify_token',
+                         'SERVER_URL': 'https://site-example-name.herokuapp.com/'
+                    }
+                </code>
+              </pre>
+              <p class="lead">5.Once filled, save your config.py file and head over to the heroku <a href="https://dashboard.heroku.com/apps">dashboard</a> and select your previously created app.</p>
+              <p class="lead">6.Once selected you should se something similar to the image below:</p>
+              
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/overview.png" style="max-width: 100%">
+              
+              <p class="lead">Navigate to the deploy section and then select the heroku-git option as shown in the image below:</p>
+              
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/deploy.png" style="max-width: 100%">
+              
+              <p class="lead">Ensure you have navigated to the folder containing your bot and type in the given commands to your terminal as indicated in the image below:</p>
+              
+              <img src="https://github.com/anthonymiyoro/Bot-Builder-Site/raw/master/images/install.png" style="max-width: 100%">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Contact us</h2>
+              <p class="lead">Malik</p>
+              <p class="lead">Anthony</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+      
+      
 
 			<!-- FACEBOK LOGIN BUTTON -->
 <!-- #################################################################### -->
   	<div id="fb-root"></div>
+    
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
@@ -18,9 +226,8 @@
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-    <h2>Hello! It works!</h2>
 
-    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+<!--    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>-->
 
     <!-- #################################################################### -->
 
