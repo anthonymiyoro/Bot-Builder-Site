@@ -145,10 +145,52 @@ Ensure you have navigated to the folder containing your bot and type in the give
 ![Install](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/install.png "")
 
 
+## HOW TO EDIT YOUR BOTS TEMPLATE
+
+The logic of all the bots here are held in the messenger.py file of the template. Below are the following elements you'll want to add followed by the code needed to implement them.
+
+### QUICK REPLIES
+
+A quick reply consists of small buttons which are good for presenting multiple choices to a user. A quick reply is defined in own function as shown below:
+
+```
+def hello(recipient):
+    page.send(recipient, "Hi! 😄")
+    page.send(recipient, "What would you like to buy?",
+              quick_replies=[QuickReply(title=("Sneakers 👟"), payload="BUY_SNEAKERS"),
+                             QuickReply(title=("Jeans 👖"), payload="BUY_JEANS"),
+                             ],
+              metadata="DEVELOPER_DEFINED_METADATA")
+	      
+```
+
+![quick reply](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/quick_reply.png "")
 
 
+The response for the button is ran when the payload is recieved. The Jeans 👖 button above should allow the user to view all the jeans and make a purchase. The template is called when the payload BUY_JEANS from button above, is recieved as shown below.
 
+```
+elif quick_reply_payload == 'BUY_JEANS':
+            show_jeans(sender_id)
+            start_again(sender_id)
+   
+```
 
+This snippet is found within the recieved message function which collects the different messages and deals with them respectively.
+
+```
+@page.handle_message
+def received_message(event):
+    sender_id = event.sender_id
+    recipient_id = event.recipient_id
+    time_of_message = event.timestamp
+    message = event.message
+    
+```
+
+Running both functions produces the result shown below:
+
+![quick_resuts](https://github.com/anthonymiyoro/Bot-Builder-Site/blob/master/images/quick_reply_results.png "")
 
 
 
